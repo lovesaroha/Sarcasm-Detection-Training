@@ -90,7 +90,7 @@ model.fit(training_data, training_labels, epochs=epochs, callbacks=[
 # Predict on a random validation text.
 index = 7
 text = validation_data[index]
-prediction = model.predict(text.reshape(1, 120, 1))
+prediction = model.predict(text.reshape(1, text_length, 1))
 
 print("Prediciton : ", prediction[0][0] )
 print("Label : " , validation_labels[index])
